@@ -349,11 +349,11 @@ static bool AStar(Node start, Node dest)
 
 static float Gcalcuate(Node pos, Node currentOrigin)
 {
-	float G;
+	float G = currentOrigin.gCost;
 	if (currentOrigin.x != pos.x && currentOrigin.y != pos.y)
-		G = 14.0f;
+		G += 14.0f;
 	else
-		G = 10.0f;
+		G += 10.0f;
 	return G;
 }
 // 20/04/2019 - 25/04/2019

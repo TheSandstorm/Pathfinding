@@ -95,7 +95,11 @@ int main()
 		if (cols > 1 && rows > 1)
 			Reset = true;
 		else
+		{
 			std::cout << "Input was not vaild" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 	}
 	Reset = false;
 	Board.resize((cols));
@@ -112,7 +116,11 @@ int main()
 		if (isValidPlacement(x, y) == true)
 			Reset = true;
 		else
+		{
 			std::cout << "Input was not vaild" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 	}
 	Reset = false;
 	Node start;
@@ -129,7 +137,11 @@ int main()
 		if (isValidPlacement(x, y) == true)
 			Reset = true;
 		else
-			std::cout << "Input was not vaild" << std::endl;
+		{
+			std::cout << "Input was not vaild" << std::endl;			
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 	}
 	Reset = false;
 	Node dest;
